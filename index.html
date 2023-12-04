@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body, h1, h2, p, ul, li, form, fieldset, legend, input, select {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        div {
+            background-color: #f5f5f5;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        fieldset {
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="submit"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background: url('https://cdn2.iconfinder.com/data/icons/essential-web-1-2/48/33-512.png') no-repeat right center;
+            background-size: 20px;
+        }
+        input:invalid {
+            border-color: #ff8080;
+        }
+
+        input:valid {
+            border-color: #ccc;
+        }
+    </style>
+
+    <title>Ficha Cadastral</title>
+</head>
+<body>
+    <div>
+        <form action="https://formsubmit.co/p.ghizi@gmail.com" method="POST">
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <label>Primeiro Nome:</label>
+                <input type="text" name="primeiroNome" placeholder="Primeiro nome" class="class_input_name">
+                <br><br>
+                <label>Sobrenome:</label>
+                <input type="text" name="sobrenome" placeholder="Sobrenome" class="class_input_name">
+                <br><br>
+                <label>CPF:</label>
+                <input type="text" name="CPF" placeholder="Digite o seu CPF" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required>
+                <label>Data de Nascimento:</label>
+                <input type="text" name="Nascimento" placeholder="DDMMAAAA" pattern="[0-9]{8}" required>
+                <label>Telefone:</label>
+                <input type="tel" name="fone" placeholder="DDDxxxxxxxxx" pattern="[0-9]{11}" required>
+                <br><br>
+                <label>Genero:</label>
+                <br>
+                <label>Masculino</label>
+                <input type="radio" name="sexo" value="masculino">
+                <label>Feminino</label>
+                <input type="radio" name="sexo" value="feminino">
+                <br><br>
+                <label>Estado Civil:</label>
+                <select name="EstadoCivil">
+                    <option value="solteiro">Solteiro(a)</option>
+                    <option value="casado">Casado(a)</option>
+                    <option value="divorciado">Divorciado(a)</option>
+                    <option value="viuvo">Viuvo(a)</option>
+                    <option value="uniao estavel">Uniao Estavel(a)</option>
+                    <option value="outro">Outros</option>
+                </select>
+                <label>Renda Mensal (opcional):</label>
+                <input type="text" name="rendamensal" placeholder="Digite a sua renda">
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Endereco</legend>
+                <label>Endereco:</label>
+                <input type="text" name="endereco" placeholder="Endereco" required>
+                <br><br>
+                <label>Numero:</label>
+                <input type="text" name="numero" placeholder="Numero" required>
+                <label>Complemento</label>
+                <input type="text" name="complemento" placeholder="Apto, Bloco, Predio">
+                <br><br>
+                <label>CEP:</label>
+                <input type="text" name="cep" placeholder="Digite o seu CEP">
+                <br>
+                <br>
+                <label>Estado:</label>
+                <select name="estado">
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapa</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="GO">Goias</option>
+                    <option value="MA">Maranhao</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Para</option>
+                    <option value="PB">Paraiba</option>
+                    <option value="PR">Parana</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piaui</option>
+                    <option value="RR">Roraima</option>
+                    <option value="RO">Rondonia</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">Sao Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TP">Tocantins</option>
+                </select>
+                <label>Cidade:</label>
+                <input type="text" name="cidade" placeholder="Informe a sua cidade" required>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Dados do seu Pet</legend>
+                <label>Nome do pet:</label>
+                <input  type="text" name="nomePet" placeholder="Nome do pet" required>
+                <br><br>
+                <label>Raça:</label>
+                <input  type="text" name="racaPet" placeholder="Informe a raça" required>
+                <br><br>
+                <label>Data de Nascimento:</label>
+                <input type="text" name="nascimentoPet" placeholder="DDMMAAAA" pattern="[0-9]{8}" maxlength="8" required>
+                <br><br>
+                <label>Sexo</label>
+                <br>
+                <label>Masculino</label>
+                <input type="radio" name="sexoPet" value="masculino">
+                <label>Feminino</label>
+                <input type="radio" name="sexoPet" value="feminino">
+            </fieldset>
+            <br><br>
+            <div style="text-align: left;">
+                <label>Envio dos dados cadastrais</label>
+                <input class="class_botao_enviar" type="submit" />
+            </div>
+            <br><br>
+    </div>
+</body>
+</html>
